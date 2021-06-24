@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Patua+One&display=swap"
+        rel="stylesheet">
+    <link href="src/styles/reset.css" rel="stylesheet">
+    <link rel="stylesheet"  href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/quotes.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+    <script>
+    AOS.init({
+        offset: 200,
+        duration: 600,
+        easing: 'ease-in-sine',
+        delay: 100,
+    });
+    </script>
+    <title>Conscious</title>
+</head>
+<body>
+    <header>
+    <h1>Conscious</h1>
+    <button id="pause-play" class="fa fa-volume-up"></button>
+    </header>
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <audio id="audio1" autoplay controls>
+        <source src="./assets/music/meditation.mp3" />
+    </audio>
+    <div class="wrapper">
+    <section class="quote-section" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+    <div class="mb-wrap mb-style-2">
+        <blockquote cite="http://www.gutenberg.org/ebboks/11">
+            <p id="quote-text"> Click the new quote button!</p>
+        </blockquote>
+        </div>
+            <p class="mb-author"></p>
+        <button id="quote-btn">New Quote!</button>
+    </section>
+    <section class="main-section">
+        <div class="intro-text" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+
+            <h1>What does it mean to be conscious?</h1>
+            <p>
+                The definition of consciousness is quite simple. At it's simplest, consciousness is sentience or awareness of internal and external existence.
+            </p>
+            <p>
+                While this concept may be a simple one, we can go minutes, hours, days, weeks, months, sometimes even years without being aware of our internal and external existence.
+            </p>
+            <p>
+                It can be very easy to get caught up in the whirlwind of circumstances we call our lives, in which case our consciousness becomes hijacked.
+            </p>
+            <p>
+                Luckily, there are practices that we can implement into our daily routines that can give us access to reclaiming our consciousness.
+            </p>
+            <p>
+                One of the most popular and effective practices to regain control of our consciousness is meditation.
+            </p>
+        </div>
+
+        <div class="meditation-text">
+            <h1>Meditation</h1>
+            <p>
+                Meditation is a practice where an individual uses a technique – such as mindfulness, or focusing the mind on a particular object,
+                thought, or activity – to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state.
+            </p>
+            <p>
+                The positive effects of meditation, however, are not only limited to being more present in the moment. Below is a visual representation of some of the incredible results that people can see from practicing meditation.
+            </p>
+        </div>
+
+        <div class="meditation-stats">
+            
+        </div>
+    </section>
+    <svg/>
+    <div class="chart"></div>
+    <section class="sidebar"></section>
+    <script src="./dist/main.js"></script>
+    <script src="bower_components/aos/dist/aos.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    //    border: 5px solid black;
+    background-size: cover;
+    height: 25vh;
+    background-image: url('../assets/images/samuel-austin-omeaSFHIxYk-unsplash.jpg');
+    min-height: 10rem;
+    -webkit-text-stroke: 1px black;
+   color: rgb(240, 240, 240);
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    h1 {
+            // justify-content: center;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 3;
+        grid-column-start: 1;
+        align-self: center;
+        // position: relative;
+        // top: 9vh;
+        text-align: center;
+        // width: 100%;
+        font-family: 'Patua One', cursive;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        color: rgb(87, 87, 87);
+    }
+}
+
+#pause-play {
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    // position: relative;
+    // right: 95%;
+    grid-row: 2;
+    grid-column: 1;
+    align-self: flex-end;
+    &:hover {
+        color: grey;
+    }
+    &:active {
+        color:rgb(52, 52, 52)
+    }
+}
+
+#audio1 {
+    display: none;
+}
+
+.main-section {
+    padding-top: 20rem;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+    p {
+        font-size: 1.25rem;
+        text-align: center;
+        padding-top: 1rem;
+        font-weight: 100;
+        font-stretch: ultra-expanded;
+    }
+}
+
+.intro-text {
+    padding-top: 5rem;
+}
+
+.meditation-text {
+    padding-top: 5rem;
+    
+}

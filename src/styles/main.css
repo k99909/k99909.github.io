@@ -1,0 +1,95 @@
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  background-size: cover;
+  height: 25vh;
+  background-image: url("../assets/images/samuel-austin-omeaSFHIxYk-unsplash.jpg");
+  min-height: 10rem;
+  -webkit-text-stroke: 1px black;
+  color: #f0f0f0;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+header h1 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  font-family: 'Patua One', cursive;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #575757;
+}
+
+#pause-play {
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#pause-play:hover {
+  color: grey;
+}
+
+#pause-play:active {
+  color: #343434;
+}
+
+#audio1 {
+  display: none;
+}
+
+.main-section {
+  padding-top: 20rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+.main-section h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.main-section p {
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: 100;
+  font-stretch: ultra-expanded;
+}
+
+.intro-text {
+  padding-top: 5rem;
+}
+
+.meditation-text {
+  padding-top: 5rem;
+}
+/*# sourceMappingURL=main.css.map */
