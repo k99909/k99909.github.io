@@ -179,4 +179,33 @@ button:hover {
   padding-right: 6rem;
   width: 25vw;
 }
+
+.how-to {
+  padding-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.how-to h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.how-to p {
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: 100;
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: 2;
+}
 /*# sourceMappingURL=main.css.map */

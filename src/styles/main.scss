@@ -158,3 +158,22 @@ button {
     }
 }
 
+.how-to {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+    p {
+        font-size: 1.25rem;
+        text-align: center;
+        padding-top: 1rem;
+        font-weight: 100;
+        width: 50%;
+        align-self: center;
+        line-height: 2;
+    }
+}
