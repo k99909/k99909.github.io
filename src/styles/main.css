@@ -42,15 +42,10 @@ button:hover {
   color: white;
   height: 2rem;
   width: 2rem;
-  font-size: 1.5rem;
+  font-size: 3rem;
   outline: none;
   border: none;
-  -ms-grid-row: 2;
-  grid-row: 2;
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  padding-right: 2rem;
 }
 
 #pause-play:hover {
@@ -61,12 +56,41 @@ button:hover {
   color: #343434;
 }
 
+.buttons {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+  gap: 30px;
+}
+
+.buttons .fa-github, .buttons .fa-linkedin {
+  height: 2rem;
+  width: 2rem;
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.buttons .fa-github:hover, .buttons .fa-linkedin:hover {
+  color: grey;
+}
+
+.buttons .fa-github:active, .buttons .fa-linkedin:active {
+  color: #343434;
+}
+
 #audio1 {
   display: none;
 }
 
 .main-section {
-  padding-top: 20rem;
   margin-left: 25vw;
   margin-right: 25vw;
 }
@@ -91,5 +115,68 @@ button:hover {
 
 .meditation-text {
   padding-top: 5rem;
+}
+
+.map-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  padding-top: 5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#map-img {
+  width: auto;
+  height: 20rem;
+}
+
+.age-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.age-wrapper h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.benefits-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding-left: 8%;
+}
+
+.benefits-wrapper h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.benefits-wrapper .benefits-text-div {
+  padding-right: 6rem;
+  width: 25vw;
 }
 /*# sourceMappingURL=main.css.map */

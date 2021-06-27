@@ -45,14 +45,13 @@ button {
     color: white;
     height: 2rem;
     width: 2rem;
-    font-size: 1.5rem;
+    font-size: 3rem;
     outline: none;
     border: none;
+    padding-right: 2rem;
     // position: relative;
     // right: 95%;
-    grid-row: 2;
-    grid-column: 1;
-    align-self: flex-end;
+
     &:hover {
         color: grey;
     }
@@ -61,12 +60,34 @@ button {
     }
 }
 
+.buttons {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: flex-end;
+    display: flex;
+    padding-bottom: 1rem;
+    gap: 30px;
+
+    .fa-github, .fa-linkedin {
+        height: 2rem;
+        width: 2rem;
+        color: white;
+        font-size: 3rem;
+        text-decoration: none;
+        &:hover {
+        color: grey;
+        }
+        &:active {
+        color:rgb(52, 52, 52)
+        }
+    }
+}
+
 #audio1 {
     display: none;
 }
 
 .main-section {
-    padding-top: 20rem;
     margin-left: 25vw;
     margin-right: 25vw;
     h1 {
@@ -89,5 +110,51 @@ button {
 
 .meditation-text {
     padding-top: 5rem;
-    
+
 }
+
+.map-div {
+    display: flex;
+    width: 100vw;
+    padding-top: 5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#map-img {
+    width: auto;
+    height: 20rem;
+}
+
+.age-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+}
+
+.benefits-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-left: 8%;
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+    .benefits-text-div {
+        padding-right: 6rem;
+        width: 25vw;
+    }
+}
+
