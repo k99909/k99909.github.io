@@ -83,7 +83,6 @@ d3.select('#quote-btn')
         .on('click', function () {
             let randAuth = authors[Math.floor(Math.random() * authors.length)]
             let randQuote = quotes[randAuth][Math.floor(Math.random() * quotes[randAuth].length)]
-            // d3.select('h3').remove()
             d3.select('#quote-text').text(randQuote)
             d3.select('.mb-author').text(randAuth)
         });
@@ -101,15 +100,12 @@ document.getElementById('pause-play').addEventListener('click', function (e) {
     }
 }, false);
 
-// set the dimensions and ageMargins of the graph
 const width = 450
 const height = 450
 const margin = 40
 
-// The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of ageMargin.
 const radius = Math.min(width, height) / 2 - margin
 
-// append the svg object to the div called 'my_dataviz'
 const svg = d3.select(".meditate-circle")
   .append("svg")
     .attr("width", width)
@@ -117,27 +113,23 @@ const svg = d3.select(".meditate-circle")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-// Create dummy data
 let data = {a: 14, b: 86}
 
-// set the color scale
 let color = d3.scaleOrdinal()
   .domain(data)
   .range(['#ffd384','#94ebcd'])
 
-// Compute the position of each group on the pie:
 let pie = d3.pie()
   .value(function(d) {return d.value; })
 let data_ready = pie(d3.entries(data))
 
-// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 svg
   .selectAll('filler')
   .data(data_ready)
   .enter()
   .append('path')
   .attr('d', d3.arc()
-    .innerRadius(120)         // This is the size of the donut hole
+    .innerRadius(120)         
     .outerRadius(radius)
   )
   .attr('fill', function(d){ return(color(d.data.key)) })
@@ -171,12 +163,10 @@ svg
     .text(" practiced meditation")
 
 
-// set the dimensions and ageMargins of the graph
 const ageMargin = {top: 10, right: 30, bottom: 90, left: 40}
 const ageWidth = 460 - ageMargin.left - ageMargin.right
 const ageHeight = 450 - ageMargin.top - ageMargin.bottom;
 
-// append the svg object to the body of the page
 let ageSvg = d3.select(".age-div")
   .append("svg")
     .attr("width", ageWidth + ageMargin.left + ageMargin.right)
@@ -186,10 +176,9 @@ let ageSvg = d3.select(".age-div")
           "translate(" + ageMargin.left + "," + ageMargin.top + ")");
 
 
-// Parse the Data
 d3.csv("src/assets/data/age.csv", ageData => {
 console.log(ageData)
-// X axis
+
 let x = d3.scaleBand()
   .range([ 0, ageWidth ])
   .domain(ageData.map(function(d) { return d.Age; }))
@@ -201,14 +190,12 @@ ageSvg.append("g")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");
 
-// Add Y axis
 let y = d3.scaleLinear()
   .domain([0, 20])
   .range([ ageHeight, 0]);
 ageSvg.append("g")
   .call(d3.axisLeft(y));
 
-// Bars
 ageSvg.selectAll()
   .data(ageData)
   .enter()
@@ -217,11 +204,9 @@ ageSvg.selectAll()
     .attr("width", x.bandwidth())
     .attr("fill", "#94ebcd")
     .attr("stroke", "black")
-    // no bar at the beginning thus:
-    .attr("height", function(d) { return ageHeight - y(0); }) // always equal to 0
+    .attr("height", function(d) { return ageHeight - y(0); })
     .attr("y", function(d) { return y(0); })
 
-// Animation
 ageSvg.selectAll("rect")
   .transition()
   .duration(800)
@@ -234,12 +219,10 @@ ageSvg.selectAll("rect")
 
 
 
-// set the dimensions and margins of the graph
 const benMargin = {top: 10, right: 10, bottom: 10, left: 10};
 const benWidth = 445 - benMargin.left - benMargin.right;
 const benHeight = 445 - benMargin.top - benMargin.bottom;
 
-// append the svg object to the body of the page
 let benSvg = d3.select(".benefits-graph")
 .append("svg")
   .attr("width", benWidth + benMargin.left + benMargin.right)
@@ -248,25 +231,20 @@ let benSvg = d3.select(".benefits-graph")
   .attr("transform",
         "translate(" + benMargin.left + "," + benMargin.top + ")");
 
-// Read data
 d3.csv("src/assets/data/benefits.csv", function(benData) {
 
-  // stratify the data: reformatting for d3.js
   let root = d3.stratify()
-    .id(function(d) { return d.name; })   // Name of the entity (column name is name in csv)
-    .parentId(function(d) { return d.parent; })   // Name of the parent (column name is parent in csv)
+    .id(function(d) { return d.name; })
+    .parentId(function(d) { return d.parent; })
     (benData);
-  root.sum(function(d) { return +d.value })   // Compute the numeric value for each entity
+  root.sum(function(d) { return +d.value })
 
-  // Then d3.treemap computes the position of each element of the hierarchy
-  // The coordinates are added to the root object above
   d3.treemap()
     .size([benWidth, benHeight])
     .padding(4)
     (root)
 
 console.log(root.leaves())
-  // use this information to add rectangles:
   benSvg
     .selectAll("rect")
     .data(root.leaves())
@@ -279,14 +257,13 @@ console.log(root.leaves())
       .style("stroke", "black")
       .style("fill", "#69b3a2");
 
-  // and to add the text labels
   benSvg
     .selectAll("text")
     .data(root.leaves())
     .enter()
     .append("text")
-      .attr("x", d => { return d.x0+5})    // +10 to adjust position (more right)
-      .attr("y", d => { return d.y0+20})    // +20 to adjust position (lower)
+      .attr("x", d => { return d.x0+5})
+      .attr("y", d => { return d.y0+20})
       .text(d => { return `${d.data.name}: ${d.data.value}%`})
       .attr("font-size", "15px")
       .attr("fill", "white")
