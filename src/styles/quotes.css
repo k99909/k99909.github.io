@@ -63,8 +63,6 @@ body {
 }
 
 .mb-style-2 blockquote p {
-  background : none repeat scroll 0 0 rgba(255, 255, 255, 0.5); 
-  box-shadow : 0 -3px 0 rgba(216, 216, 216, 0.2); 
   color : rgba(2, 2, 2, 0.8); 
   display : inline; 
   font-family : Baskerville, Georgia, serif; 

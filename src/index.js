@@ -134,6 +134,10 @@ svg
   )
   .attr('fill', function(d){ return(color(d.data.key)) })
   .attr("stroke", "black")
+  .attr("class", "circle")
+  .on('click', function(d) {
+    window.location.href = "https://www.thegoodbody.com/meditation-statistics/"
+  })
   .style("stroke-width", "2px")
   .style("opacity", 0.7)
 
@@ -163,8 +167,8 @@ svg
     .text(" practiced meditation")
 
 
-const ageMargin = {top: 10, right: 30, bottom: 90, left: 40}
-const ageWidth = 460 - ageMargin.left - ageMargin.right
+const ageMargin = {top: 10, right: 30, bottom: 90, left: 40};
+const ageWidth = 460 - ageMargin.left - ageMargin.right;
 const ageHeight = 450 - ageMargin.top - ageMargin.bottom;
 
 let ageSvg = d3.select(".age-div")

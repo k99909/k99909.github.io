@@ -177,3 +177,14 @@ button {
         line-height: 2;
     }
 }
+
+.meditate-circle {
+    path {
+        &:hover {
+            filter: brightness(90%)
+        }
+        &:active {
+            filter: brightness(50%)
+        }
+    }
+}
