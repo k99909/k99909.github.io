@@ -218,4 +218,9 @@ button:hover {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
+
+.age-div rect:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
 /*# sourceMappingURL=main.css.map */
