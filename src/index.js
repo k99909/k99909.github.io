@@ -90,7 +90,7 @@ const zenColors = [
   "#d9e2d1",
   "#e2e9dc",
   "#ecf0e8"
-]
+];
 
 d3.select('#quote-btn')
         .on('click', function () {
