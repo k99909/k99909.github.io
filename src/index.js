@@ -148,7 +148,7 @@ svg
     .innerRadius(120)         
     .outerRadius(radius)
   )
-  .attr('fill', function(d){ return(color(d.data.key)) })
+  .attr('fill', function(d){ return(color(d.data.key)); })
   .attr("stroke", "black")
   .attr("class", "circle")
   .on('click', function(d) {
