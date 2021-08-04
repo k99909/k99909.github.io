@@ -258,10 +258,10 @@ let benSvg = d3.select(".benefits-graph")
 d3.csv("src/assets/data/benefits.csv", function(benData) {
 
   let root = d3.stratify()
-    .id(function(d) { return d.name;})
+    .id(function(d) { return d.name; })
     .parentId(function(d) { return d.parent; })
     (benData);
-  root.sum(function(d) { return +d.value })
+  root.sum(function(d) { return +d.value; })
 
   d3.treemap()
     .size([benWidth, benHeight])
