@@ -313,6 +313,6 @@ console.log(root.leaves())
       .text(d => { return `${d.data.name}: ${d.data.value}%`; })
       .attr("font-size", "15px")
       .attr("fill", "white")
-      .attr("font-family", "'Oswald', sans-serif;")
+      .attr("font-family", "'Oswald', sans-serif;");
 
 })
