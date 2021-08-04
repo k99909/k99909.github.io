@@ -115,7 +115,7 @@ document.getElementById('pause-play').addEventListener('click', function (e) {
     }
 }, false);
 
-const width = 450
+const width = 450;
 const height = 450;
 const margin = 40;
 
