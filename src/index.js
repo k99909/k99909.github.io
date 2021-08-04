@@ -97,7 +97,7 @@ d3.select('#quote-btn')
             let randAuth = authors[Math.floor(Math.random() * authors.length)];
             let randQuote = quotes[randAuth][Math.floor(Math.random() * quotes[randAuth].length)];
             let randColor = zenColors[Math.floor(Math.random() * zenColors.length)];
-            d3.select('#quote-text').text(randQuote)
+            d3.select('#quote-text').text(randQuote);
             d3.select('.mb-author').text(randAuth)
             console.log(randColor)
             d3.select('body').style('background-color', randColor)
