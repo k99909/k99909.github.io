@@ -135,8 +135,8 @@ let color = d3.scaleOrdinal()
   .range(['#ffd384','#94ebcd'])
 
 let pie = d3.pie()
-  .value(function(d) {return d.value; })
-let data_ready = pie(d3.entries(data))
+  .value(function(d) {return d.value; });
+let data_ready = pie(d3.entries(data));
 
 svg
   .selectAll('filler')
