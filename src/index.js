@@ -1,6 +1,6 @@
 import "./styles/index.scss";
 
-d3.select('h1').style('font-size', '5rem')
+d3.select('h1').style('font-size', '5rem');
 
 
 const quotes = {
