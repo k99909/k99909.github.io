@@ -128,7 +128,7 @@ const svg = d3.select(".meditate-circle")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-let data = {a: 14, b: 86}
+let data = {a: 14, b: 86};
 
 let color = d3.scaleOrdinal()
   .domain(data)
