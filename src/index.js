@@ -107,12 +107,12 @@ let audio_info = document.getElementById('audio1');
 document.getElementById('pause-play').addEventListener('click', function (e) {
     if (audio_info.paused) {
         audio_info.play();
-        e.target.classList.toggle('fa-volume-off')
-        e.target.classList.toggle('fa-volume-up')
+        e.target.classList.toggle('fa-volume-off');
+        e.target.classList.toggle('fa-volume-up');
     } else {
         audio_info.pause();
-        e.target.classList.toggle('fa-volume-up')
-        e.target.classList.toggle('fa-volume-off')
+        e.target.classList.toggle('fa-volume-up');
+        e.target.classList.toggle('fa-volume-off');
     }
 }, false);
 
