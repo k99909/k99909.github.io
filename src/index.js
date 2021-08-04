@@ -75,7 +75,7 @@ const quotes = {
     "If you are facing in the right direction, all you need to do is keep on walking.",
     "Every morning we are born again. What we do today is what matters most."
   ]
-}
+};
 
 const authors = Object.keys(quotes);
 
