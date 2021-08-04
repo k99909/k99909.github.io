@@ -94,7 +94,7 @@ const zenColors = [
 
 d3.select('#quote-btn')
         .on('click', function () {
-            let randAuth = authors[Math.floor(Math.random() * authors.length)]
+            let randAuth = authors[Math.floor(Math.random() * authors.length)];
             let randQuote = quotes[randAuth][Math.floor(Math.random() * quotes[randAuth].length)]
             let randColor = zenColors[Math.floor(Math.random() * zenColors.length)]
             d3.select('#quote-text').text(randQuote)
