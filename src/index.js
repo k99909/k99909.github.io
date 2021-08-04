@@ -119,7 +119,7 @@ const width = 450
 const height = 450
 const margin = 40
 
-const radius = Math.min(width, height) / 2 - margin
+const radius = Math.min(width, height) / 2 - margin;
 
 const svg = d3.select(".meditate-circle")
   .append("svg")
@@ -132,7 +132,7 @@ let data = {a: 14, b: 86};
 
 let color = d3.scaleOrdinal()
   .domain(data)
-  .range(['#ffd384','#94ebcd'])
+  .range(['#ffd384','#94ebcd']);
 
 let pie = d3.pie()
   .value(function(d) {return d.value; });
