@@ -189,6 +189,7 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 5rem;
 }
 
 .how-to h1 {
@@ -220,6 +221,11 @@ button:hover {
 }
 
 .age-div rect:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.benefits-wrapper rect:active {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
 }

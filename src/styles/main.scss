@@ -160,6 +160,7 @@ button {
     padding-top: 10rem;
     display: flex;
     flex-direction: column;
+    padding-bottom: 5rem;
     h1 {
         font-size: 2rem;
         text-align: center;
@@ -190,6 +191,14 @@ button {
 .age-div {
     rect {
         &:hover {
+            filter: brightness(90%)
+        }
+    }
+}
+
+.benefits-wrapper {
+    rect {
+            &:active {
             filter: brightness(90%)
         }
     }

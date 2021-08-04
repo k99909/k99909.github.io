@@ -226,6 +226,10 @@ ageSvg.selectAll()
     .attr("stroke", "black")
     .attr("height", function(d) { return ageHeight - y(0); })
     .attr("y", function(d) { return y(0); })
+    .on("mouseover", (d, i) => {
+    d3.select(".age-text").text(`of people aged ${d.Age} practice meditation`)
+    d3.select(".age-percentage").text(`${d.Value}%`)
+  })
 
 ageSvg.selectAll("rect")
   .transition()
@@ -265,6 +269,24 @@ d3.csv("src/assets/data/benefits.csv", function(benData) {
     (root)
 
 console.log(root.leaves())
+
+  function handleMouseOver(d, i) {
+    console.log(d)
+    console.log(this)
+    if (d3.select(this).style('fill') === 'orange') { d3.select(this).style('fill', 'rgb(105, 179, 162)')} else {d3.select(this).style("fill", "orange")}
+    d3.select(".benefits-percent").text(`${d.data.value}%`)
+    d3.select(".benefits-text").text(`of people between reported that meditation helped with ${d.data.name}`)
+      .data(root.leaves())
+      .enter()
+      .attr("id", d => { return "t" + d.x + "-" + d.y + i })
+      .attr("x", d => { return d.x0+5})
+      .attr("y", d => { return d.y0+20})
+      .text(d => { return `${d.data.name}: ${d.data.value}%`})
+      .attr("font-size", "15px")
+      .attr("fill", "white")
+      .attr("font-family", "'Oswald', sans-serif;")
+  }
+
   benSvg
     .selectAll("rect")
     .data(root.leaves())
@@ -275,7 +297,12 @@ console.log(root.leaves())
       .attr('width', function (d) { return d.x1 - d.x0; })
       .attr('height', function (d) { return d.y1 - d.y0; })
       .style("stroke", "black")
-      .style("fill", "#69b3a2");
+      .style("fill", "#69b3a2")
+      .on("mouseover", handleMouseOver)
+      .on("click", (d) => {return window.open(`https://www.youtube.com/results?search_query=meditation+for+${d.data.name}`, '_blank')})
+      // .on("mouseout", handleMouseOut);
+
+
 
   benSvg
     .selectAll("text")
@@ -288,4 +315,5 @@ console.log(root.leaves())
       .attr("font-size", "15px")
       .attr("fill", "white")
       .attr("font-family", "'Oswald', sans-serif;")
+
 })
