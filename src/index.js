@@ -77,7 +77,7 @@ const quotes = {
   ]
 }
 
-const authors = Object.keys(quotes)
+const authors = Object.keys(quotes);
 
 const zenColors = [
   "#c3d3b2",
