@@ -100,7 +100,7 @@ d3.select('#quote-btn')
             d3.select('#quote-text').text(randQuote);
             d3.select('.mb-author').text(randAuth);
             console.log(randColor)
-            d3.select('body').style('background-color', randColor)
+            d3.select('body').style('background-color', randColor);
         });
 
 let audio_info = document.getElementById('audio1');
